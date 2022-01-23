@@ -1,0 +1,91 @@
+{
+  "groups": [
+    {
+      "groupName": "App Info",
+      "seperatorColor": "#e0ecff",
+      "elements": [
+        {
+          "type": "TEXTFIELD",
+          "value": "Dynamic UI",
+          "identifier": "app_name",
+          "title": "App Name"
+        },
+        {
+          "type": "TEXTFIELD",
+          "value": "-",
+          "identifier": "app_version",
+          "title": "App Version",
+          "dynamic": true
+        }
+      ]
+    },
+    {
+      "groupName": "App Settings",
+      "seperatorColor": "#e0ecff",
+      "elements": [
+        {
+          "type": "SLIDER",
+          "value": 20,
+          "identifier": "shakeThreshold",
+          "minValue": 9,
+          "maxValue": 40,
+          "title": "Shake Threshold",
+          "isPercentageScale": true
+        },
+        {
+          "type": "BUTTON",
+          "identifier": "clearData",
+          "title": "Clear Data"
+        },
+        {
+          "type": "TOGGLE",
+          "value": false,
+          "identifier": "enableProxy",
+          "title": "Enable Proxy   ",
+          "color": "#f2f7ff",
+          "onValue": {
+
+          }
+        },
+        {
+          "type": "TOGGLE",
+          "value": false,
+          "identifier": "enableRoot",
+          "title": "Enable  Root    ",
+          "color": "#f2f7ff",
+          "onValue": {
+
+          }
+        },
+        {
+          "type": "DROPDOWN",
+          "value": "QA",
+          "identifier": "baseURL",
+          "title": "Base URL",
+          "options": {
+            "QA": "http://52.71.209.75:5445/dynamicui",
+            "UAT": "http://172.20.57.128:5445/dynamicui",
+            "Mock": "http://test-neebal.herokuapp.com/dynamicui",
+            "Manual": "insert your url"
+          },
+          "onValue": {
+            "insert your url": {
+              "type": "EDITABLE_TEXTFIELD",
+              "value": "http://serverurl/dynamicui",
+              "identifier": "customBaseURL",
+              "title": "Custom Base URL"
+            }
+          },
+          "color": "#f2f7ff"
+        },
+        {
+          "type": "TOGGLE",
+          "value": true,
+          "identifier": "enableCaching",
+          "title": "Enable  Cache",
+          "color": "#f2f7ff"
+        }
+      ]
+    }
+  ]
+}
